@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2I2-J3-gQA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend List-->
+        <scene sceneID="vYB-Vt-sLE">
+            <objects>
+                <tableViewController id="zI3-OC-AO6" customClass="FriendListViewController" customModule="iOS_CleanArchitecture_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gsl-cN-Ss7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="zI3-OC-AO6" id="Dtg-ze-ev8"/>
+                            <outlet property="delegate" destination="zI3-OC-AO6" id="ulf-1Z-AQp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friend List" id="Gd8-gl-ERH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qe-cH-47e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719.20000000000005" y="15.742128935532236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ji5-1m-jiI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2I2-J3-gQA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WJy-eZ-6kE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zI3-OC-AO6" kind="relationship" relationship="rootViewController" id="TRf-IO-4Ph"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CU-yh-nmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="15.742128935532236"/>
+        </scene>
+    </scenes>
+</document>
