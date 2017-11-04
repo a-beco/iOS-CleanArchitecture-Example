@@ -14,9 +14,9 @@ import Foundation
 // 今回は特に何も無いが、データ形式を変換してから渡すならばここに書く。
 
 struct FriendListController {
-    let useCase: FriendListUseCase
+    let useCase: FriendListUseCaseInput
     
-    init(useCase: FriendListUseCase) {
+    init(useCase: FriendListUseCaseInput) {
         self.useCase = useCase
     }
     
